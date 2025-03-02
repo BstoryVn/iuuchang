@@ -209,7 +209,7 @@ a:hover{
   width: 8rem;
   height: 8rem;
   border-radius: 10rem;
-  border: 0.2rem solid #fff;
+  border: 0.2rem solid #FF007F;
   box-shadow: 0 0 22px rgb(123, 92, 151);
   /* margin-left:10px; */
 }
@@ -218,14 +218,14 @@ a:hover{
   text-align: center;
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #fff;
+  color: #FF007F;
   font-weight: 700;
 }
 .bg-img .middle .img-female span {
   display: block;
   text-align: center;
   font-size: 1.2rem;
-  color: #fff;
+  color: #FF007F;
   margin-top: 1rem;
   font-weight: 700;
 }
