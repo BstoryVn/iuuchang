@@ -1,16 +1,32 @@
 // CHỈNH NGÀY BẮT ĐẦU HẸN HÒ
-$(function() {
-    var ngayhenho="13-1-2025";
+$(function () {
+    var ngayhenho = "13-1-2025"; // Định dạng DD-MM-YYYY
+    var e = ngayhenho.split("-");
+    
+    // Chuyển đổi thành định dạng YYYY-MM-DD để đảm bảo trình duyệt hiểu đúng
+    var ngayBatDau = new Date(`${e[2]}-${e[1].padStart(2, '0')}-${e[0].padStart(2, '0')}T00:00:00`);
+    
+    if (isNaN(ngayBatDau)) {
+        console.error("Lỗi khi tạo ngày, vui lòng kiểm tra lại định dạng!");
+        return;
+    }
+
     setInterval(() => {
-        let e=ngayhenho.split("-"),
-            n=new Date(`${e[2]}-${e[1]}-${e[0]}`),
-            o=new Date - n;
-        $("#wus-ngay").text(Math.floor(o / 864e5));
-        $("#wus-gio").text(Math.floor(o % 864e5 / 36e5));
-        $("#wus-phut").text(Math.floor(o % 36e5 / 6e4));
-        $("#wus-giay").text(Math.floor(o % 6e4 / 1e3));
+        let hienTai = new Date();
+        let khoangThoiGian = hienTai - ngayBatDau;
+
+        let soNgay = Math.floor(khoangThoiGian / 86400000);
+        let soGio = Math.floor((khoangThoiGian % 86400000) / 3600000);
+        let soPhut = Math.floor((khoangThoiGian % 3600000) / 60000);
+        let soGiay = Math.floor((khoangThoiGian % 60000) / 1000);
+
+        $("#wus-ngay").text(soNgay);
+        $("#wus-gio").text(soGio);
+        $("#wus-phut").text(soPhut);
+        $("#wus-giay").text(soGiay);
     }, 1000);
 });
+
 // TRÁI TIM RƠI
 $(function() {
     setInterval(function () {
