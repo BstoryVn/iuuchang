@@ -44,7 +44,7 @@ $(function() {
 });
 // RANDOM BACKGROUND
 $(function() {
-    const backgrounds=['./public/bg.jpg', './public/src/img/bg2.jpg', './public/bg3.jpg'];
+    const backgrounds=['./public/bg.jpg', './public/src/img/bg2.jpg'];
     function RandomBackground() {
         $('.bg-img').css('background-image', 'url(' + backgrounds[Math.floor(Math.random() * backgrounds.length)] + ')');
     }
