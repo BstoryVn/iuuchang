@@ -314,7 +314,7 @@ a:hover{
           }
           .anime-cb img {
             width: 150px;
-            height: 70px;
+            height: auto;
             @media (max-width: 600px) {
               width: 100px;
             }
