@@ -4,3 +4,61 @@
 @import url(small.css) only screen and (min-width: 768px);
 @import url(medium.css) only screen and (min-width: 960px);
 @import url(big.css) only screen and (min-width: 1200px);
+
+/* Đảm bảo bố cục của middle đồng đều */
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Căn các phần tử từ trên xuống để tránh lệch */
+  }
+  
+  /* Định dạng img-male và img-female */
+  .img-male, .img-female {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử bên trong */
+    width: 120px; /* Chiều rộng cố định để hai bên đồng đều */
+    text-align: center;
+    min-height: 350px; /* Tăng chiều cao tối thiểu để hai bên cân đối */
+  }
+  
+  /* Định dạng ảnh avatar */
+  .img-male img, .img-female img {
+    width: 100px; /* Kích thước ảnh cố định */
+    height: 100px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Viền tròn cho ảnh */
+    margin-bottom: 10px; /* Khoảng cách giữa ảnh và tên */
+  }
+  
+  /* Định dạng tên */
+  .middle .name {
+    font-size: 18px; /* Kích thước chữ của tên */
+    color: #ff69b4; /* Màu hồng */
+    margin: 5px 0; /* Khoảng cách trên dưới */
+    line-height: 1.2; /* Đảm bảo chiều cao dòng đồng đều */
+  }
+  
+  /* Định dạng container của Sở Thích */
+  .middle .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các dòng Sở Thích */
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng của img-male/img-female */
+  }
+  
+  /* Định dạng chữ Sở Thích */
+/* Định dạng chữ Sở Thích */
+.middle .details {
+    display: block;
+    font-size: 14px; /* Kích thước chữ nhỏ hơn tên */
+    color: #333333 !important; /* Màu đen nhạt */
+    margin: 0; /* Xóa margin để các dòng sát nhau hơn */
+    text-align: center; /* Căn giữa chữ */
+    line-height: 0.8; /* Giảm khoảng cách dòng */
+    text-shadow: 
+      0 0 2px rgba(255, 255, 255, 0.8), /* Viền trắng nhẹ */
+      0 0 5px rgba(255, 255, 255, 0.5); /* Hiệu ứng phát sáng */
+  }
+  
+  /* Định dạng trái tim */
